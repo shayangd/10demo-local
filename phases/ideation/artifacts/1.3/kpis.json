@@ -1,0 +1,287 @@
+{
+  "venture": "10Demo - AI Agent for Live Product Demos",
+  "analysis_date": "2025-01-02",
+  "recipe_version": "1.3",
+  "data_sources": {
+    "reddit": {
+      "mentions": 67,
+      "subreddits": 5,
+      "date_range": "2025-01-19 to 2025-08-17"
+    },
+    "tavily": {
+      "mentions": 35,
+      "platforms": 8,
+      "date_range": "2024 to 2026"
+    },
+    "total_mentions": 102,
+    "unique_platforms": 9
+  },
+  "kpis": {
+    "pain_intensity": {
+      "id": "I1.3.1",
+      "name": "Pain Intensity",
+      "score": 6.8,
+      "unit": "/10",
+      "threshold": 7.0,
+      "threshold_operator": ">=",
+      "pass": false,
+      "evidence_source": "Complaint severity from Reddit posts, reviews, and forum discussions",
+      "calculation_method": "Weighted average of severity-coded mentions",
+      "severity_distribution": {
+        "existential_9_10": {
+          "count": 15,
+          "percentage": 14.7,
+          "weight": 9.5
+        },
+        "severe_7_8": {
+          "count": 35,
+          "percentage": 34.3,
+          "weight": 7.5
+        },
+        "moderate_5_6": {
+          "count": 30,
+          "percentage": 29.4,
+          "weight": 5.5
+        },
+        "minor_3_4": {
+          "count": 22,
+          "percentage": 21.6,
+          "weight": 3.5
+        }
+      },
+      "top_pain_themes": [
+        {
+          "theme": "Demo No-Show Epidemic",
+          "frequency": 28,
+          "severity": 8.0,
+          "percentage": 27.5
+        },
+        {
+          "theme": "Speed-to-Lead Crisis",
+          "frequency": 22,
+          "severity": 9.0,
+          "percentage": 21.6
+        },
+        {
+          "theme": "Generic/Non-Personalized Demos",
+          "frequency": 18,
+          "severity": 7.0,
+          "percentage": 17.6
+        },
+        {
+          "theme": "Low Demo-to-Close Conversion",
+          "frequency": 15,
+          "severity": 8.0,
+          "percentage": 14.7
+        },
+        {
+          "theme": "Scaling Manual Demo Processes",
+          "frequency": 12,
+          "severity": 6.0,
+          "percentage": 11.8
+        }
+      ],
+      "confidence": "medium",
+      "notes": "Score is 0.2 points below threshold - a close miss. Pain is real but not existential for most teams."
+    },
+    "workarounds": {
+      "id": "I1.3.2",
+      "name": "Workarounds",
+      "score": 56.9,
+      "unit": "%",
+      "threshold": 60.0,
+      "threshold_operator": ">=",
+      "pass": false,
+      "evidence_source": "Percentage of mentions describing DIY fixes, scripts, manual processes, or tool usage",
+      "calculation_method": "Mentions with workarounds / Total mentions × 100",
+      "workaround_count": 58,
+      "total_mentions": 102,
+      "top_workarounds": [
+        {
+          "workaround": "Pre-Qualification Forms",
+          "frequency": 12,
+          "description": "Add 5-8 qualifying questions before booking to filter bad fits"
+        },
+        {
+          "workaround": "Remove 'Book a Demo' Button / Self-Serve Trials",
+          "frequency": 10,
+          "description": "Eliminate scheduling friction, offer 14-day free trial with instant access"
+        },
+        {
+          "workaround": "AI Chatbots & Voice Agents",
+          "frequency": 9,
+          "description": "Respond within 60 seconds, handle 24/7 booking, qualify leads automatically"
+        },
+        {
+          "workaround": "Automated Email Workflows",
+          "frequency": 8,
+          "description": "Time-based reminders, follow-up sequences, personalized recap emails"
+        },
+        {
+          "workaround": "Instant/On-Call Demos",
+          "frequency": 7,
+          "description": "'Are you free now? 5 minutes' approach, zero scheduling friction"
+        },
+        {
+          "workaround": "SDR Teams for Demo Booking",
+          "frequency": 6,
+          "description": "Hire BDRs to handle scheduling, manual qualification calls"
+        },
+        {
+          "workaround": "Interactive Demo Platforms",
+          "frequency": 5,
+          "description": "Storylane, Navattic - click-through demos instead of videos"
+        },
+        {
+          "workaround": "Embedded Calendar Scheduling",
+          "frequency": 5,
+          "description": "Calendly/HubSpot integration, direct booking on landing pages"
+        },
+        {
+          "workaround": "Shorter, Problem-Focused Demos",
+          "frequency": 4,
+          "description": "Cut from 45 to 25 minutes, lead with pain point"
+        },
+        {
+          "workaround": "LinkedIn/Social Direct Outreach",
+          "frequency": 3,
+          "description": "Bypass demo funnel, DM prospects, book via conversation"
+        }
+      ],
+      "confidence": "high",
+      "notes": "Score is 3.1 percentage points below threshold. Many partial solutions exist but none comprehensively solve the problem."
+    },
+    "recency": {
+      "id": "I1.3.3",
+      "name": "Recency",
+      "score": 80.4,
+      "unit": "%",
+      "threshold": 70.0,
+      "threshold_operator": ">=",
+      "pass": true,
+      "evidence_source": "Percentage of mentions from last 90 days (relative to collection date)",
+      "calculation_method": "Recent mentions (last 90 days) / Total mentions × 100",
+      "recent_count": 82,
+      "total_mentions": 102,
+      "monthly_breakdown": {
+        "2025-08": 12,
+        "2025-07": 9,
+        "2025-06": 8,
+        "2025-05": 14,
+        "2025-04": 6,
+        "2025-03": 4,
+        "2025-02": 8,
+        "2025-01": 6,
+        "2024-12": 4,
+        "2024-11": 3,
+        "2024-10": 5,
+        "2024-09": 3
+      },
+      "confidence": "high",
+      "notes": "Well above threshold. Problem is actively discussed and current, not historical."
+    },
+    "trend_growth": {
+      "id": "I1.3.4",
+      "name": "Trend Growth",
+      "yoy_growth": null,
+      "yoy_calculation": "Insufficient data - cannot calculate reliable YoY comparison",
+      "mom_trend": "volatile with recent upward trend",
+      "consecutive_mom_increases": 2,
+      "threshold": "≥20% YoY OR ≥3 consecutive MoM increases",
+      "pass": false,
+      "direction": "growing",
+      "direction_symbol": "↗",
+      "evidence_source": "Month-over-month mention volume, qualitative signals from AI adoption and buyer behavior shifts",
+      "qualitative_signals": [
+        "AI agent adoption surge (2024-2025)",
+        "Cost pressure on sales teams (35% reduction with AI vs traditional)",
+        "Self-serve movement (75% of B2B buyers want rep-free experience)",
+        "Speed-to-lead arms race (21x conversion with <5min response)",
+        "Post-COVID remote selling adjustments"
+      ],
+      "key_drivers": [
+        "Post-COVID hybrid sales models making demo friction more visible",
+        "AI tool proliferation (ChatGPT late 2022 sparked automation wave)",
+        "Economic headwinds pressuring sales headcount reduction",
+        "Buyer behavior shift toward self-serve and instant access",
+        "Competition intensity ('fastest response wins' dynamic)"
+      ],
+      "confidence": "low",
+      "notes": "Insufficient quantitative data for YoY calculation. Qualitative signals suggest growth but cannot verify against threshold."
+    },
+    "coverage": {
+      "id": "I1.3.5",
+      "name": "Coverage Quality Gate",
+      "total_mentions": 102,
+      "mention_threshold": 25,
+      "mention_pass": true,
+      "unique_platforms": 9,
+      "platform_threshold": 2,
+      "platform_pass": true,
+      "overall_pass": true,
+      "platforms_list": [
+        "Reddit (r/SaaS)",
+        "Reddit (r/sales)",
+        "Reddit (r/Entrepreneur)",
+        "Reddit (r/b2b_sales)",
+        "Reddit (r/startups)",
+        "LinkedIn",
+        "TrustPilot",
+        "Industry Blogs",
+        "Business Software Sites"
+      ],
+      "confidence": "high",
+      "notes": "Strong coverage - 4x minimum mention threshold, 4.5x minimum platform threshold"
+    }
+  },
+  "verdict": {
+    "evidence_strength": "LOW",
+    "kpis_passing": 1,
+    "kpis_total": 4,
+    "decision": "NO",
+    "recommendation": "Do not proceed to customer interviews",
+    "rationale": "Only 1 of 4 primary KPIs passed threshold. While the problem exists and has active discussion (strong recency), it does not meet the severity threshold (6.8/10 vs 7.0 required) that would indicate a strong market need. The abundance of existing workarounds (56.9%) and partial solutions suggests the market may not be ready to adopt a new comprehensive solution, or that the problem is not painful enough to drive significant willingness to pay.",
+    "risk_level": "HIGH",
+    "risks": [
+      "Pain intensity below threshold (6.8 vs 7.0) - optimization problem not existential crisis",
+      "Only 56.9% show workarounds vs 60% threshold - limited market resourcefulness",
+      "Trend data inconclusive - cannot verify growth trajectory",
+      "Many existing solutions (Calendly, Chili Piper, AI chatbots, SDR teams) suggest crowded space",
+      "Pain may be symptom of poor product-market fit rather than scheduling friction"
+    ],
+    "alternative_paths": [
+      {
+        "path": "Pivot to Specific Niche",
+        "description": "Focus on B2B SaaS with $5M-$50M ARR, complex products, 5-20 AEs, >60% no-show rates"
+      },
+      {
+        "path": "Wait and Monitor",
+        "description": "Reassess in 6-12 months if market conditions worsen or no-show rates increase industry-wide"
+      },
+      {
+        "path": "Explore Adjacent Problems",
+        "description": "Pivot to post-demo follow-up, demo personalization at scale, or pre-demo lead qualification"
+      },
+      {
+        "path": "Validate Willingness to Pay",
+        "description": "Conduct 10-15 problem validation interviews to assess if stated pain translates to budget allocation"
+      }
+    ]
+  },
+  "metadata": {
+    "methodology": "Recipe 1.3 Market Signals Validation (Problem Validation Focus)",
+    "recipe_version": "3.1",
+    "pain_severity_rubric": "9-10=existential, 7-8=severe, 5-6=moderate, 3-4=minor, 1-2=minimal",
+    "workaround_criteria": "Scripts, manual processes, tool combinations, hiring, outsourcing = ✅; wishful thinking = ❌",
+    "data_quality": "High - 102 mentions across 9+ platforms with multiple independent source confirmation of key metrics",
+    "confidence_level": "Medium - Strong data coverage but close-to-threshold scores on Pain and Workarounds introduce uncertainty",
+    "limitations": [
+      "Reddit date ranges suggest demo/test data (future dates Jan-Aug 2025)",
+      "Limited quantitative YoY trend data prevents growth rate calculation",
+      "Selection bias toward vocal frustrated users on Reddit/forums",
+      "Self-reported pain may be exaggerated for engagement purposes",
+      "Missing large enterprise voices (skews toward early-stage, SMB)"
+    ],
+    "analyst_notes": "The 6.8 pain score is frustratingly close to the 7.0 threshold (0.2 point miss), and the 56.9% workaround rate nearly hits 60% (3.1 point miss). In a different market context or with a slightly different sample, this could flip to MEDIUM verdict. However, Recipe 1.3 methodology is clear: thresholds must be met. The close misses suggest real pain exists but may not be severe enough to drive rapid adoption of a new solution without strong differentiation from existing tools."
+  }
+}
