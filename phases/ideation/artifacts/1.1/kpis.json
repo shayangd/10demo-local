@@ -1,0 +1,143 @@
+{
+  "recipe_id": "1.1",
+  "generated_at": "2025-01-02T00:00:00Z",
+  "verdict": "CONDITIONAL",
+  "verdict_rationale": "Interview materials prepared and ready for execution. KPIs cannot be calculated until founder completes 10-15 customer discovery interviews. This is a preparation phase, not an analysis phase.",
+  "kpis": [
+    {
+      "id": "I1.1",
+      "name": "Pain Intensity",
+      "score": 0,
+      "passed": false,
+      "threshold": {
+        "go": 70,
+        "conditional": 60
+      },
+      "unit": "/10",
+      "evidence": "Not yet measured - awaiting interview data from Q4 (0-10 pain scale)"
+    },
+    {
+      "id": "I1.2",
+      "name": "Active Workarounds",
+      "score": 0,
+      "passed": false,
+      "threshold": {
+        "go": 70,
+        "conditional": 60
+      },
+      "unit": "%",
+      "evidence": "Not yet measured - awaiting interview data from Q5 (workarounds)"
+    },
+    {
+      "id": "I1.3",
+      "name": "Recency",
+      "score": 0,
+      "passed": false,
+      "threshold": {
+        "go": 75,
+        "conditional": 60
+      },
+      "unit": "%",
+      "evidence": "Not yet measured - awaiting interview data from Q2 (problem experienced within 30 days)"
+    },
+    {
+      "id": "I1.4",
+      "name": "Solution Resonance",
+      "score": 0,
+      "passed": false,
+      "threshold": {
+        "go": 70,
+        "conditional": 60
+      },
+      "unit": "%",
+      "evidence": "Not yet measured - awaiting interview data from Q9, Q16 (positive reaction to solution)"
+    },
+    {
+      "id": "I1.5",
+      "name": "Competitive Displacement",
+      "score": 0,
+      "passed": false,
+      "threshold": {
+        "go": 60,
+        "conditional": 50
+      },
+      "unit": "%",
+      "evidence": "Not yet measured - awaiting interview data from Q10 (willingness to switch)"
+    },
+    {
+      "id": "I1.6",
+      "name": "Outcome Alignment",
+      "score": 0,
+      "passed": false,
+      "threshold": {
+        "go": 80,
+        "conditional": 70
+      },
+      "unit": "%",
+      "evidence": "Not yet measured - awaiting interview data from Q8, Q12, Q15 (solution matches desired outcomes)"
+    },
+    {
+      "id": "I1.7",
+      "name": "Budget Existence",
+      "score": 0,
+      "passed": false,
+      "threshold": {
+        "go": 60,
+        "conditional": 50
+      },
+      "unit": "%",
+      "evidence": "Not yet measured - awaiting interview data from Q17 (budget allocated)"
+    },
+    {
+      "id": "I1.8",
+      "name": "Purchase Intent",
+      "score": 0,
+      "passed": false,
+      "threshold": {
+        "go": 50,
+        "conditional": 40
+      },
+      "unit": "%",
+      "evidence": "Not yet measured - awaiting interview data from Q25 (purchase intent ≥4/5) and Q26 (pilot willingness)"
+    },
+    {
+      "id": "I1.9",
+      "name": "Interview Completion Rate",
+      "score": 0,
+      "passed": false,
+      "threshold": {
+        "go": 80,
+        "conditional": 70
+      },
+      "unit": "%",
+      "evidence": "Not yet measured - awaiting completion of 10-15 interviews (completed / scheduled)"
+    },
+    {
+      "id": "I1.10",
+      "name": "Van Westendorp Pricing Convergence",
+      "score": 0,
+      "passed": false,
+      "threshold": {
+        "go": 100,
+        "conditional": 80
+      },
+      "unit": "convergence",
+      "evidence": "Not yet measured - awaiting interview data from Q21-Q24 (too expensive, too cheap, expensive but acceptable, bargain price)"
+    }
+  ],
+  "summary": {
+    "total": 10,
+    "passed": 0,
+    "failed": 0,
+    "not_yet_measured": 10,
+    "pass_rate": 0.0
+  },
+  "status": "PREPARATION_COMPLETE",
+  "next_steps": [
+    "Founder to recruit 10-15 interview participants using provided templates",
+    "Conduct interviews following 27-question script",
+    "Complete interview tracking template for each interview",
+    "After 10-15 interviews, calculate KPIs and update this file",
+    "Analyzer agent to compute final verdict: GO/CONDITIONAL/NO-GO"
+  ]
+}
