@@ -1,0 +1,215 @@
+{
+  "recipe_id": "1.1",
+  "recipe_name": "Problem Validation",
+  "venture_name": "10Demo",
+  "status": "materials_ready",
+  "created_date": "2025-12-08",
+  "interviews_completed": 0,
+  "interviews_target": 15,
+  "kpis": {
+    "I1.1_articulation_clarity": {
+      "name": "Articulation Clarity",
+      "description": "Percentage of interviewees who can clearly articulate the problem",
+      "measurement": "% of interviews",
+      "target": ">=70%",
+      "actual": null,
+      "status": "pending",
+      "data_source": "Q1, Q8 responses in tracking template",
+      "calculation_method": "Count interviews where problem was clearly described with specifics / Total interviews"
+    },
+    "I1.2_problem_frequency": {
+      "name": "Problem Frequency",
+      "description": "Percentage reporting problem occurs at least weekly",
+      "measurement": "% of interviews",
+      "target": ">=70%",
+      "actual": null,
+      "status": "pending",
+      "data_source": "Q2, Q7 frequency data",
+      "calculation_method": "Count interviews with >=weekly occurrence / Total interviews"
+    },
+    "I1.3_problem_severity": {
+      "name": "Problem Severity",
+      "description": "Average pain score reported by interviewees",
+      "measurement": "0-10 scale",
+      "target": ">=7.0",
+      "actual": null,
+      "status": "pending",
+      "data_source": "Q4 pain severity score",
+      "calculation_method": "Sum of all pain scores / Total interviews",
+      "distribution": {
+        "score_9_10": 0,
+        "score_7_8": 0,
+        "score_5_6": 0,
+        "score_3_4": 0,
+        "score_1_2": 0
+      }
+    },
+    "I1.4_current_workarounds": {
+      "name": "Current Workarounds",
+      "description": "Percentage using workarounds with significant gaps",
+      "measurement": "% of interviews",
+      "target": ">=60%",
+      "actual": null,
+      "status": "pending",
+      "data_source": "Q5, Q6 workaround analysis",
+      "calculation_method": "Count interviews with incomplete/unsatisfactory workarounds / Total interviews",
+      "common_workarounds": []
+    },
+    "I1.5_competitive_awareness": {
+      "name": "Competitive Landscape Awareness",
+      "description": "Percentage familiar with existing alternatives",
+      "measurement": "% of interviews",
+      "target": ">=50%",
+      "actual": null,
+      "status": "pending",
+      "data_source": "Q5, Q13 competitive mentions",
+      "calculation_method": "Count interviews mentioning competitive alternatives / Total interviews",
+      "competitors_mentioned": []
+    },
+    "I1.6_solution_resonance": {
+      "name": "Solution Resonance",
+      "description": "Percentage showing positive solution resonance",
+      "measurement": "% of interviews",
+      "target": ">=60%",
+      "actual": null,
+      "status": "pending",
+      "data_source": "Q10-Q15 solution reaction",
+      "calculation_method": "Count interviews with positive reaction and >=50% use case fit / Total interviews",
+      "positive_reactions": 0,
+      "neutral_reactions": 0,
+      "negative_reactions": 0
+    },
+    "I1.7_competitive_displacement": {
+      "name": "Competitive Displacement",
+      "description": "Percentage who would replace existing tools/processes",
+      "measurement": "% of interviews",
+      "target": ">=50%",
+      "actual": null,
+      "status": "pending",
+      "data_source": "Q13, Q16 displacement potential",
+      "calculation_method": "Count interviews indicating tool/spend displacement / Total interviews",
+      "average_displaced_spend": null,
+      "tools_to_replace": []
+    },
+    "I1.8_budget_available": {
+      "name": "Budget Availability",
+      "description": "Percentage with budget authority and current relevant spend",
+      "measurement": "% of interviews",
+      "target": ">=60%",
+      "actual": null,
+      "status": "pending",
+      "data_source": "Q17, Q19 budget data",
+      "calculation_method": "Count interviews with budget authority and >=10K current spend / Total interviews",
+      "average_current_spend": null,
+      "budget_authority_count": 0
+    },
+    "I1.9_willingness_to_pay": {
+      "name": "Willingness to Pay (Optimal Range)",
+      "description": "Van Westendorp optimal price range",
+      "measurement": "$ annual",
+      "target": "Clear range emerges with >=10 interviews",
+      "actual": null,
+      "status": "pending",
+      "data_source": "Q21-Q24 Van Westendorp data",
+      "calculation_method": "Aggregate Van Westendorp curves to find optimal range",
+      "van_westendorp_data": {
+        "too_expensive_avg": null,
+        "too_cheap_avg": null,
+        "getting_expensive_avg": null,
+        "bargain_avg": null,
+        "optimal_price_point": null,
+        "acceptable_range_lower": null,
+        "acceptable_range_upper": null
+      },
+      "preferred_pricing_model": null
+    },
+    "I1.10_purchase_intent": {
+      "name": "Purchase Intent",
+      "description": "Average purchase intent and percentage with high intent",
+      "measurement": "1-5 scale",
+      "target": "Average >=4.0, >=60% score 4-5",
+      "actual": null,
+      "status": "pending",
+      "data_source": "Q25, Q26 purchase intent",
+      "calculation_method": "Sum of all purchase intent scores / Total interviews",
+      "distribution": {
+        "score_5": 0,
+        "score_4": 0,
+        "score_3": 0,
+        "score_2": 0,
+        "score_1": 0
+      },
+      "high_intent_percentage": null,
+      "early_adopter_candidates": []
+    }
+  },
+  "persona_breakdown": {
+    "P1_vp_director_sales": {
+      "name": "VP/Director of Sales (Mid-Market)",
+      "target_count": 5,
+      "actual_count": 0,
+      "avg_pain_score": null,
+      "avg_purchase_intent": null
+    },
+    "P2_sales_ops_leader": {
+      "name": "Sales Operations Leader (Enterprise)",
+      "target_count": 3,
+      "actual_count": 0,
+      "avg_pain_score": null,
+      "avg_purchase_intent": null
+    },
+    "P3_founder_ceo": {
+      "name": "Founder/CEO (Early-Stage)",
+      "target_count": 4,
+      "actual_count": 0,
+      "avg_pain_score": null,
+      "avg_purchase_intent": null
+    },
+    "P4_sdr_manager": {
+      "name": "SDR Manager (Mid-Market)",
+      "target_count": 3,
+      "actual_count": 0,
+      "avg_pain_score": null,
+      "avg_purchase_intent": null
+    }
+  },
+  "overall_assessment": {
+    "pass_fail_status": "pending",
+    "criteria": {
+      "problem_validated": {
+        "description": "Pain >=7/10 for >=70% of interviews",
+        "status": "pending",
+        "met": null
+      },
+      "solution_fit": {
+        "description": "Solution resonance >=60%",
+        "status": "pending",
+        "met": null
+      },
+      "market_viability": {
+        "description": "Purchase intent >=4/5 for >=60%",
+        "status": "pending",
+        "met": null
+      },
+      "pricing_clarity": {
+        "description": "Clear optimal price range emerges",
+        "status": "pending",
+        "met": null
+      },
+      "early_adopters": {
+        "description": "3+ early adopter candidates identified",
+        "status": "pending",
+        "met": null
+      }
+    },
+    "decision": "pending",
+    "next_steps": [],
+    "key_insights": [],
+    "major_concerns": []
+  },
+  "notes": {
+    "instructions": "This KPI file will be populated by the analyzer agent after interviews are completed. The founder should focus on conducting interviews and filling out the tracking template. Once 10-15 interviews are complete, the analyzer will calculate all KPI values and determine pass/fail status.",
+    "data_source": "interview-tracking-template.md aggregate analysis section",
+    "analysis_timing": "After 10-15 interviews completed"
+  }
+}
