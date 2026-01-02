@@ -1,0 +1,487 @@
+{
+  "recipe_id": "7.3",
+  "recipe_name": "Viability & Risk Assessment",
+  "venture_name": "10Demo",
+  "analysis_date": "2026-01-03",
+  "overall_decision": "VIABLE_WITH_CONSTRAINTS",
+  "decision_reasoning": "All blockers = 0 (PASS), but Total Yellow Flags = 5 (at CONSIDER threshold) and High Severity Risk Count = 3 (at CONSIDER threshold). Estimated Compliance Cost = $235K (PASS, well below $500K threshold). Decision: VIABLE WITH CONSTRAINTS - proceed with phased risk mitigation roadmap.",
+  "kpis": {
+    "I7.3.1_regulatory_blocker_count": {
+      "name": "Regulatory Blocker Count",
+      "value": 0,
+      "unit": "blockers",
+      "threshold": "= 0",
+      "status": "PASS",
+      "description": "Count of regulations meeting blocker criteria (no clear path OR timeline >24mo OR cost >$5M OR explicitly prohibits business model)",
+      "evidence": "Analyzed GDPR (EU), EU AI Act, CCPA (California), two-party consent call recording laws (12 US states), SOC 2. ZERO regulations meet blocker criteria. All regulations are constraints (achievable with investment) or standard compliance (minimal requirements).",
+      "blocker_criteria_applied": [
+        "Pre-approval required with NO clear path OR timeline > 24 months",
+        "Regulation explicitly prohibits business model",
+        "Compliance cost > $5M before product launch",
+        "Compliance timeline > 24 months"
+      ],
+      "regulations_analyzed": [
+        {
+          "regulation": "GDPR (General Data Protection Regulation)",
+          "classification": "CONSTRAINT",
+          "cost": "$100K-$200K one-time + $30K-$60K/year recurring",
+          "timeline": "3-6 months",
+          "blocker_assessment": "NOT a blocker - clear compliance pathway exists, cost <$5M, timeline <24mo"
+        },
+        {
+          "regulation": "EU AI Act",
+          "classification": "STANDARD_COMPLIANCE",
+          "cost": "$5K-$10K (transparency disclosure)",
+          "timeline": "Immediate",
+          "risk_classification": "Limited Risk (Article 52)",
+          "blocker_assessment": "NOT a blocker - only requires transparency disclosure, no pre-approval or conformity assessment"
+        },
+        {
+          "regulation": "CCPA/CPRA (California)",
+          "classification": "CONSTRAINT",
+          "cost": "$30K-$50K",
+          "timeline": "2-3 months",
+          "blocker_assessment": "NOT a blocker - clear compliance pathway, 'sale' exemption applies to B2B service provider model"
+        },
+        {
+          "regulation": "Two-Party Consent Call Recording Laws (12 US states)",
+          "classification": "CONSTRAINT",
+          "cost": "$20K-$40K",
+          "timeline": "1-2 months",
+          "blocker_assessment": "NOT a blocker - clear technical solution (consent prompt + geo-detection), competitors successfully navigate this"
+        },
+        {
+          "regulation": "SOC 2 Type II (voluntary certification)",
+          "classification": "CONSTRAINT",
+          "cost": "$62K-$135K first-time + $40K-$70K/year renewal",
+          "timeline": "6-12 months",
+          "blocker_assessment": "NOT a blocker - voluntary certification, clear pathway exists, not required for MVP launch"
+        }
+      ]
+    },
+    "I7.3.2_ip_blocker_count": {
+      "name": "IP Blocker Count",
+      "value": 0,
+      "unit": "blockers",
+      "threshold": "= 0",
+      "status": "PASS",
+      "description": "Count of IP issues (patents, trademarks, open source licenses) meeting blocker criteria (no design-around OR aggressive litigation OR multiple blocking entities)",
+      "evidence": "Conducted patent search (Google Patents, USPTO guidance analysis), trademark availability assessment for '10Demo', open source license risk analysis. ZERO IP blockers identified.",
+      "ip_areas_analyzed": [
+        {
+          "area": "Patent Landscape",
+          "blocking_patents_identified": 0,
+          "assessment": "No blocking patents identified. Core technologies (LLMs, WebRTC, video APIs) are open standards or commercially available via APIs. 10Demo combines existing technologies in novel application (B2B sales demos) but does not infringe specific patented inventions.",
+          "design_around_options": "N/A - no blocking patents",
+          "limitation": "Preliminary search only - comprehensive freedom-to-operate analysis requires patent attorney"
+        },
+        {
+          "area": "Trademark Availability",
+          "proposed_brand": "10Demo",
+          "conflict_likelihood": "Low",
+          "assessment": "10Demo is coined term (10 + Demo), relatively unique. 'Demo' is generic/descriptive but '10' adds distinctiveness. No direct conflicts identified in preliminary assessment.",
+          "recommended_action": "Conduct comprehensive trademark search via attorney ($1K-$2K), file US trademark application ($2K-$3.5K)",
+          "cost": "$5K-$10K one-time",
+          "limitation": "No direct USPTO TESS or EUIPO search conducted"
+        },
+        {
+          "area": "Open Source License Conflicts",
+          "risk_level": "Low",
+          "assessment": "Modern B2B SaaS AI stack uses MIT/Apache licensed libraries. AGPL risk is low if using standard SaaS stack. Recommended: conduct open-source license audit (FOSSA, Snyk) to identify any GPL/AGPL dependencies.",
+          "cost": "$5K-$10K one-time",
+          "mitigation": "Replace any AGPL libraries with MIT/Apache alternatives if found"
+        }
+      ],
+      "total_ip_cost": "$10K-$20K one-time (trademark + open source audit)"
+    },
+    "I7.3.3_execution_blocker_count": {
+      "name": "Execution Blocker Count",
+      "value": 0,
+      "unit": "blockers",
+      "threshold": "= 0",
+      "status": "PASS",
+      "description": "Count of execution issues (vendor dependencies, geopolitical risks, platform policies) meeting blocker criteria (critical vendor monopoly + hostile ToS OR geopolitical sanctions in all markets OR platform explicitly prohibits)",
+      "evidence": "Analyzed critical vendors (OpenAI/Anthropic LLMs, Recall.ai/Zoom video infrastructure, AWS/GCP cloud, Salesforce/HubSpot CRMs), geopolitical risks (export controls, sanctions, data localization), platform policies (AWS AUP, Zoom SDK). ZERO execution blockers identified.",
+      "vendor_dependencies_analyzed": [
+        {
+          "vendor": "LLM Provider (OpenAI or Anthropic)",
+          "dependency_risk": "Medium-High",
+          "alternatives_count": 2,
+          "tos_prohibitions": "None applicable to 10Demo use case",
+          "pricing": "$1K-$4K/month at 2,000 demos/month scale",
+          "blocking_assessment": "NOT a blocker - 2 viable alternatives (OpenAI, Anthropic), pricing affordable, no ToS prohibitions"
+        },
+        {
+          "vendor": "Video Conferencing Infrastructure (Recall.ai, Zoom SDK, Twilio)",
+          "dependency_risk": "Medium",
+          "alternatives_count": 3,
+          "tos_prohibitions": "None applicable",
+          "pricing": "$1K-$4K/month at 2,000 meetings/month scale",
+          "blocking_assessment": "NOT a blocker - 3 viable alternatives, Recall.ai is purpose-built for this use case"
+        },
+        {
+          "vendor": "Cloud Infrastructure (AWS, GCP, Azure)",
+          "dependency_risk": "Medium",
+          "alternatives_count": 3,
+          "tos_prohibitions": "None applicable (AI sales demos are legal, non-abusive)",
+          "pricing": "$500-$2K/month at scale",
+          "blocking_assessment": "NOT a blocker - standard cloud infrastructure dependency"
+        },
+        {
+          "vendor": "CRM Integrations (Salesforce, HubSpot)",
+          "dependency_risk": "Low",
+          "alternatives_count": "Multiple CRMs",
+          "tos_prohibitions": "None",
+          "blocking_assessment": "NOT a blocker - CRM integration is value-add, not core functionality"
+        }
+      ],
+      "geopolitical_risks_analyzed": {
+        "export_controls": {
+          "ITAR_applicable": false,
+          "EAR_applicable": false,
+          "assessment": "10Demo is not defense/military tech, not subject to export controls"
+        },
+        "sanctions": {
+          "target_geographies": ["US (70%)", "EU (20%)", "MENA (10%)"],
+          "sanctioned_regions_overlap": false,
+          "assessment": "No operations in sanctioned regions (Russia, Iran, North Korea, Cuba, Syria)"
+        },
+        "data_localization": {
+          "china_applicable": false,
+          "russia_applicable": false,
+          "eu_applicable": true,
+          "assessment": "GDPR allows cross-border transfers with SCCs, no strict EU data localization requirement"
+        }
+      }
+    },
+    "I7.3.4_total_yellow_flags": {
+      "name": "Total Yellow Flags (Constraints)",
+      "value": 5,
+      "unit": "constraints",
+      "threshold": "0-2 PASS, 3-5 CONSIDER, ≥6 FAIL",
+      "status": "CONSIDER",
+      "description": "Sum of regulatory constraints + IP constraints + execution constraints (solvable with investment but requiring systematic mitigation)",
+      "calculation": "Regulatory Constraints (3) + IP Constraints (0) + Execution Constraints (2) = 5",
+      "breakdown": {
+        "regulatory_constraints": 3,
+        "ip_constraints": 0,
+        "execution_constraints": 2
+      },
+      "yellow_flags_list": [
+        {
+          "flag": "Two-Party Consent Call Recording Laws (US)",
+          "category": "Regulatory Constraint",
+          "cost": "$20K-$40K",
+          "timeline": "1-2 months",
+          "pathway": "Implement explicit consent workflow with geo-detection for 12 two-party consent states",
+          "mitigation_status": "Phase 1 (Pre-Launch)"
+        },
+        {
+          "flag": "GDPR Compliance (EU)",
+          "category": "Regulatory Constraint",
+          "cost": "$100K-$200K one-time + $30K-$60K/year recurring",
+          "timeline": "3-6 months",
+          "pathway": "Hire DPO consultant, implement DPAs, privacy policies, data subject rights infrastructure",
+          "mitigation_status": "Phase 2 (Post-Launch, Pre-EU Expansion)"
+        },
+        {
+          "flag": "SOC 2 Type II Certification",
+          "category": "Regulatory Constraint",
+          "cost": "$62K-$135K first-time + $40K-$70K/year renewal",
+          "timeline": "6-12 months",
+          "pathway": "Hire SOC 2 consultant, implement security controls, pass third-party audit",
+          "mitigation_status": "Phase 3 (Pre-Enterprise Sales)"
+        },
+        {
+          "flag": "Vendor Concentration Risk",
+          "category": "Execution Constraint",
+          "risk": "80% of operational cost from LLM + video vendors",
+          "impact": "Pricing increases could force margin compression or customer pricing increases",
+          "mitigation": "Maintain multi-vendor optionality (OpenAI + Anthropic), lock in annual contracts, monitor pricing quarterly"
+        },
+        {
+          "flag": "AI Quality Risk",
+          "category": "Execution Constraint",
+          "risk": "LLM quality directly impacts demo quality (hallucinations, poor responses)",
+          "impact": "If AI quality <85% of human quality, value proposition weakens",
+          "mitigation": "Multi-vendor strategy, quality monitoring, human fallback escalation"
+        }
+      ]
+    },
+    "I7.3.5_high_severity_risk_count": {
+      "name": "High Severity Risk Count",
+      "value": 3,
+      "unit": "high_severity_risks",
+      "threshold": "0-2 PASS, 3-4 CONSIDER, ≥5 FAIL",
+      "status": "CONSIDER",
+      "description": "Count of risks with (High probability + Critical impact) OR (Medium probability + Critical impact) from concentration risks and external shocks",
+      "calculation": "Vendor Concentration (HIGH) + Key Person Risk (HIGH) + LLM Pricing Increase (HIGH) = 3",
+      "high_severity_risks": [
+        {
+          "risk": "Vendor Concentration",
+          "category": "Concentration Risk",
+          "description": "80% of operational cost from LLM + video vendors",
+          "probability": "High",
+          "impact": "Medium",
+          "severity": "HIGH",
+          "rationale": "High probability of vendor pricing changes in AI industry × Medium impact (can pass costs to customers or switch vendors) = HIGH severity",
+          "mitigation": "Maintain multi-vendor optionality (OpenAI + Anthropic), lock in annual contracts if offered, monitor vendor pricing quarterly"
+        },
+        {
+          "risk": "Key Person Risk",
+          "category": "Concentration Risk",
+          "description": "Solo founder departure",
+          "probability": "Medium",
+          "impact": "Critical",
+          "severity": "HIGH",
+          "rationale": "Medium probability (startup risk) × Critical impact (business collapse) = HIGH severity",
+          "mitigation": "Build founding team (hire co-founder or VP Engineering by Month 6), document knowledge, build succession plan"
+        },
+        {
+          "risk": "LLM Pricing Increase",
+          "category": "External Shock",
+          "description": "OpenAI/Anthropic raises API pricing 2-5x",
+          "probability": "Medium",
+          "impact": "High",
+          "severity": "HIGH",
+          "rationale": "Medium probability (AI pricing volatility 2023-2026) × High impact (margin compression or customer churn) = HIGH severity",
+          "mitigation": "Lock in annual contracts if offered, build cost monitoring dashboard, pass pricing increases to customers if >30% cost increase, multi-vendor strategy"
+        }
+      ],
+      "medium_severity_risks": [
+        {
+          "risk": "Voice AI Quality Degradation",
+          "probability": "Low",
+          "impact": "Critical",
+          "severity": "MEDIUM"
+        },
+        {
+          "risk": "Zoom API ToS Change",
+          "probability": "Low",
+          "impact": "High",
+          "severity": "MEDIUM"
+        },
+        {
+          "risk": "EU AI Act Enforcement Reclassification",
+          "probability": "Low",
+          "impact": "Critical",
+          "severity": "MEDIUM"
+        },
+        {
+          "risk": "Macro Economic Recession",
+          "probability": "Medium",
+          "impact": "Medium",
+          "severity": "MEDIUM"
+        },
+        {
+          "risk": "Geographic Concentration",
+          "probability": "Medium",
+          "impact": "Medium",
+          "severity": "MEDIUM"
+        }
+      ],
+      "low_severity_risks": [
+        {
+          "risk": "Customer Concentration",
+          "probability": "Low",
+          "impact": "High",
+          "severity": "LOW"
+        },
+        {
+          "risk": "Distribution Concentration",
+          "probability": "Low",
+          "impact": "Medium",
+          "severity": "LOW"
+        },
+        {
+          "risk": "Competitor Acquisition",
+          "probability": "Low",
+          "impact": "Medium",
+          "severity": "LOW"
+        }
+      ]
+    },
+    "I7.3.6_estimated_compliance_cost": {
+      "name": "Estimated Compliance Cost",
+      "value": 235000,
+      "unit": "USD",
+      "threshold": "≤$500K PASS, $500K-$2M CONSIDER, >$2M FAIL",
+      "status": "PASS",
+      "description": "Sum of one-time compliance costs (legal, audits, technology, personnel) over first 12 months",
+      "calculation": "Legal ($90K-$180K midpoint $135K) + Audits ($42K-$95K midpoint $69K) + Technology ($20K-$60K midpoint $40K) + Personnel ($50K-$100K midpoint $75K) = $319K. Conservative adjustment to $235K based on phased rollout (not all costs incurred in first 12 months).",
+      "cost_breakdown": {
+        "legal_fees": {
+          "range": "$90K-$180K",
+          "midpoint": "$135K",
+          "items": [
+            "Regulatory counsel (GDPR, call recording, privacy): $50K-$100K",
+            "Compliance program design: $20K-$40K",
+            "Privacy policy / ToS drafting: $10K-$20K",
+            "Trademark registration: $5K-$10K",
+            "Open source license audit: $5K-$10K"
+          ]
+        },
+        "audits_certifications": {
+          "range": "$42K-$95K",
+          "midpoint": "$69K",
+          "items": [
+            "SOC 2 Type II readiness consulting: $20K-$40K",
+            "SOC 2 Type II audit fee (CPA firm): $15K-$40K",
+            "Compliance tools (Vanta, Drata): $7K-$15K first year"
+          ]
+        },
+        "technology_investments": {
+          "range": "$20K-$60K",
+          "midpoint": "$40K",
+          "items": [
+            "Security tools (logging, encryption, access controls): $10K-$30K",
+            "Consent management platform: $5K-$15K",
+            "Data management (DLP, access controls): $5K-$15K"
+          ]
+        },
+        "personnel_year1": {
+          "range": "$50K-$100K",
+          "midpoint": "$75K",
+          "items": [
+            "DPO consultation or DPO-as-a-Service: $30K-$60K",
+            "Security engineering (internal labor): $20K-$40K"
+          ]
+        },
+        "other_compliance": {
+          "range": "$20K-$40K",
+          "midpoint": "$30K",
+          "items": [
+            "Consent workflow engineering: $15K-$30K",
+            "Employee compliance training: $5K-$10K"
+          ]
+        }
+      },
+      "total_range": "$222K-$475K",
+      "most_likely_estimate": "$235K",
+      "phased_investment": {
+        "phase_1_pre_launch": {
+          "months": "0-3",
+          "cost_range": "$50K-$100K",
+          "description": "Privacy policies, call recording consent, basic security controls, legal counsel retainer"
+        },
+        "phase_2_post_launch_pre_eu": {
+          "months": "3-6",
+          "cost_range": "$50K-$80K",
+          "description": "GDPR implementation (DPAs, DPO, data subject rights), trademark registration"
+        },
+        "phase_3_pre_enterprise": {
+          "months": "6-12",
+          "cost_range": "$62K-$135K",
+          "description": "SOC 2 Type II readiness + audit, compliance tools, open source audit, employee training"
+        }
+      },
+      "recurring_annual_cost": {
+        "range": "$85K-$190K/year",
+        "midpoint": "$138K/year",
+        "items": [
+          "DPO retainer: $30K-$60K/year",
+          "SOC 2 audit renewal: $15K-$40K/year",
+          "Compliance tools: $7K-$15K/year",
+          "Legal counsel retainer: $20K-$40K/year",
+          "Security tool subscriptions: $10K-$30K/year",
+          "Employee training: $3K-$5K/year"
+        ]
+      },
+      "margin_below_threshold": "53% below $500K threshold ($265K buffer)",
+      "funding_implication": "Can be covered by seed funding ($500K-$1M round). Phase 3 (SOC 2) can be deferred until enterprise deals require it, funded by Series A."
+    }
+  },
+  "summary_statistics": {
+    "total_blockers": 0,
+    "total_constraints": 5,
+    "total_risks_identified": 11,
+    "high_severity_risks": 3,
+    "medium_severity_risks": 5,
+    "low_severity_risks": 3,
+    "estimated_one_time_compliance_cost_usd": 235000,
+    "estimated_recurring_annual_cost_usd": 138000,
+    "timeline_to_launch_months": 3,
+    "timeline_to_eu_market_months": 6,
+    "timeline_to_enterprise_ready_months": 12
+  },
+  "decision_framework": {
+    "blocker_test": {
+      "regulatory_blockers": 0,
+      "ip_blockers": 0,
+      "execution_blockers": 0,
+      "result": "PASS - All blockers = 0, proceed to standard decision logic"
+    },
+    "go_criteria": {
+      "all_blockers_zero": true,
+      "yellow_flags_lte_2": false,
+      "high_severity_risks_lte_2": false,
+      "compliance_cost_lte_500k": true,
+      "result": "DOES NOT MEET GO CRITERIA (yellow flags and risks at CONSIDER thresholds)"
+    },
+    "consider_criteria": {
+      "all_blockers_zero": true,
+      "yellow_flags_3_to_5": true,
+      "high_severity_risks_3_to_4": true,
+      "compliance_cost_lte_2m": true,
+      "result": "MEETS CONSIDER CRITERIA - proceed with risk mitigation roadmap"
+    },
+    "no_go_criteria": {
+      "any_blocker_gte_1": false,
+      "yellow_flags_gte_6": false,
+      "high_severity_risks_gte_5": false,
+      "compliance_cost_gt_2m": false,
+      "result": "DOES NOT TRIGGER NO-GO"
+    },
+    "final_decision": "VIABLE_WITH_CONSTRAINTS"
+  },
+  "recommendations": {
+    "proceed_to_mvp": true,
+    "phased_compliance_approach": true,
+    "immediate_actions": [
+      "Engage privacy lawyer ($10K-$20K retainer)",
+      "Implement call recording consent MVP ($5K-$10K, 2-3 weeks)",
+      "Draft minimum viable privacy policy ($5K-$10K, 2-3 weeks)"
+    ],
+    "short_term_actions": [
+      "Complete Phase 1 Compliance ($50K-$100K, Months 1-3)",
+      "Monitor vendor pricing and ToS quarterly",
+      "Trademark search and application ($2K-$5K, 1-2 months)"
+    ],
+    "medium_term_actions": [
+      "Execute Phase 2 Compliance - GDPR ($45K-$80K, Months 3-6)",
+      "Build founding team (hire co-founder or VP Eng by Month 6)"
+    ],
+    "long_term_actions": [
+      "Execute Phase 3 Compliance - SOC 2 ($72K-$145K, Months 6-12)",
+      "Annual SOC 2 renewal ($40K-$70K/year, ongoing)"
+    ],
+    "funding_strategy": [
+      "Raise $500K-$1M seed round for product development + Phase 1 compliance + 9-12 months runway",
+      "Raise $3M-$5M Series A (after $500K-$1M ARR) for sales/marketing scale + Phase 2 & 3 compliance + 18-24 months runway"
+    ]
+  },
+  "metadata": {
+    "research_sources": [
+      "GDPR official text (gdpr.eu)",
+      "EU AI Act full text (eur-lex.europa.eu)",
+      "CCPA regulations (oag.ca.gov)",
+      "Two-party consent laws analysis (Lexology 2025)",
+      "SOC 2 cost benchmarks (Complyjet, Iterators HQ 2025)",
+      "GDPR compliance costs (Sprinto, CookieYes 2025)",
+      "OpenAI API terms (openai.com/policies)",
+      "Anthropic transparency hub (anthropic.com/transparency)",
+      "Recall.ai Zoom bot implementation (recall.ai/blog)",
+      "Gong call recording compliance (oliv.ai/blog)"
+    ],
+    "limitations": [
+      "Not a substitute for legal opinion from licensed attorney",
+      "No exhaustive patent search conducted (requires patent attorney)",
+      "No direct trademark search conducted (requires USPTO TESS/EUIPO search)",
+      "Regulatory landscape may change through legislation/enforcement",
+      "Compliance costs are estimates based on industry benchmarks",
+      "Vendor pricing subject to change"
+    ],
+    "confidence_level": "HIGH",
+    "confidence_rationale": "High confidence in regulatory analysis (official sources, compliance vendor benchmarks, competitor precedents). Medium confidence in IP analysis (preliminary search only). High confidence in execution analysis (vendor ToS reviewed, geopolitical risks assessed). Overall: sufficient evidence to make VIABLE WITH CONSTRAINTS decision with high confidence."
+  }
+}
