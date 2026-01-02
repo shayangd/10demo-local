@@ -1,0 +1,11 @@
+interview_id,date,persona,company,pain_intensity,has_workaround,recency_90days,solution_interest,willing_to_switch,outcome_aligned,budget_confirmed,purchase_intent,current_spend,vw_too_cheap,vw_bargain,vw_expensive,vw_too_expensive
+1,2025-11-19,CEO/Co-founder,Optim,8,Yes,Yes,5,Yes,Yes,Yes,5,Yes,15,15,100,400
+2,2025-11-24,Co-founder,Gameball,6,Yes,Yes,4,Yes,Yes,Yes,4,Yes,0,200,500,5000
+3,2025-11-19,Co-founder,Crossval,7,Yes,Yes,3,Partial,Partial,No,3,Yes,0,20,99,100
+4,2025-11-24,CEO/Co-founder,Soma,9,Yes,Yes,4,Yes,Yes,Yes,4,Yes,0,500,1000,1000
+5,2025-11-26,Co-founder,Cashin.so,7,Yes,Yes,5,Yes,Yes,Yes,4,Yes,0,499,499,500
+6,2025-11-20,Co-founder,Kingpin,7,Yes,Yes,4,Yes,Yes,Partial,3,Yes,0,500,1000,2000
+7,2025-11-21,Co-founder,Fintech,4,Yes,Yes,2,No,No,Yes,2,Yes,0,500,500,500
+8,2025-11-21,Co-founder,Supersonic,8,Yes,Yes,3,Partial,Partial,Yes,3,Yes,0,200,500,500
+9,2025-11-17,Co-founder,Halal Tourism,5,No,No,3,No,Yes,Yes,2,No,0,200,300,500
+10,2025-11-17,CEO/Co-founder,B2B SaaS,9,Yes,Yes,5,Yes,Yes,Yes,5,Yes,0,200,500,500
