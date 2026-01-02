@@ -1,0 +1,133 @@
+{
+  "recipe_id": "5.1",
+  "recipe_name": "Competitor Intelligence",
+  "venture": "10demo-local",
+  "execution_date": "2026-01-02",
+  "verdict": "PASS",
+  "kpis": [
+    {
+      "id": "I5.1.1",
+      "name": "Competitor Count",
+      "description": "Number of competitors identified and profiled",
+      "target": "3-10 competitors",
+      "actual": 8,
+      "unit": "competitors",
+      "status": "PASS",
+      "pass_threshold": {
+        "min": 3,
+        "max": 10
+      },
+      "details": {
+        "direct_competitors": 3,
+        "indirect_competitors": 3,
+        "adjacent_competitors": 2,
+        "breakdown": {
+          "direct": ["Storylane", "Consensus", "Navattic"],
+          "indirect": ["Walnut", "Demostack", "Reprise"],
+          "adjacent": ["Chili Piper", "Calendly"]
+        }
+      }
+    },
+    {
+      "id": "I5.1.2",
+      "name": "Coverage Quality",
+      "description": "Percentage of competitors fully profiled across all 4 dimensions",
+      "target": "100%",
+      "actual": 100,
+      "unit": "percentage",
+      "status": "PASS",
+      "pass_threshold": {
+        "min": 100
+      },
+      "details": {
+        "total_competitors": 8,
+        "fully_profiled": 8,
+        "dimensions_covered": [
+          "Company Overview (founded, funding, size, HQ)",
+          "Target Customer (ICP, company sizes, verticals)",
+          "Solution Approach (core product, key features, technology)",
+          "Positioning (value prop, pricing, differentiation)"
+        ],
+        "sources_per_competitor": {
+          "min": 2,
+          "max": 5,
+          "average": 3.2
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total_competitors": 8,
+    "direct_competitors": 3,
+    "indirect_competitors": 3,
+    "adjacent_competitors": 2,
+    "coverage_percentage": 100,
+    "key_insights": [
+      "No competitor offers live AI-conducted voice demos with real-time UI control",
+      "Market is fragmented: static/recorded demos vs sandbox environments vs scheduling tools",
+      "Pricing ranges from freemium to $150K+/year depending on approach",
+      "10Demo occupies unique 'blue ocean' position as AI sales agent category",
+      "Consensus ($143M funding) and Walnut ($56M) are best-funded direct/indirect competitors"
+    ],
+    "competitive_gaps": [
+      "Immediate live demos (< 5 min response)",
+      "AI voice interaction during demos",
+      "Real-time UI control by AI agent",
+      "Infinite scale at zero marginal cost",
+      "Conversational qualification during demo"
+    ],
+    "recommended_priorities": {
+      "tier_1_deep_analysis": ["Consensus", "Storylane", "Walnut"],
+      "tier_2_moderate_analysis": ["Chili Piper", "Navattic"]
+    }
+  },
+  "decision_framework": {
+    "criteria": [
+      {
+        "criterion": "Competitor Count in Range",
+        "required": "3-10 competitors",
+        "actual": "8 competitors",
+        "met": true
+      },
+      {
+        "criterion": "Full Profile Coverage",
+        "required": "100% profiled",
+        "actual": "100% (8/8)",
+        "met": true
+      },
+      {
+        "criterion": "Category Mix",
+        "required": "Mix of direct/indirect represented",
+        "actual": "3 direct, 3 indirect, 2 adjacent",
+        "met": true
+      }
+    ],
+    "overall_verdict": "PASS",
+    "rationale": "All success criteria met: 8 competitors identified (within 3-10 range), 100% profile completeness across all 4 dimensions, strong category mix with direct/indirect/adjacent representation, comprehensive sourcing (2-5 sources per competitor)"
+  },
+  "next_actions": [
+    "Execute Recipe 5.2: Competitive Gap Analysis for Tier 1 competitors",
+    "Build competitive battle cards for sales team",
+    "Monitor Consensus, Storylane, Walnut for product updates quarterly",
+    "Validate competitive differentiation through customer interviews"
+  ],
+  "metadata": {
+    "execution_mode": "single-executor",
+    "agent_type": "competitor-list-executor",
+    "research_channels": [
+      "Web search (Tavily)",
+      "Company websites",
+      "G2 reviews",
+      "Crunchbase/Tracxn data",
+      "Industry comparison articles"
+    ],
+    "data_quality": {
+      "funding_data_confidence": "high",
+      "employee_count_confidence": "medium",
+      "pricing_data_confidence": "high",
+      "feature_data_confidence": "high"
+    },
+    "update_frequency": "quarterly",
+    "last_updated": "2026-01-02"
+  }
+}
